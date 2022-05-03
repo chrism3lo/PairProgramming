@@ -46,19 +46,48 @@ function isPrime(num) {
 console.log(allNums.filter(isPrime))
 
 
-let userInput = prompt("Enter a letter to see if it is a vowel.").toUpperCase();
+// let userInput = prompt("Enter a letter to see if it is a vowel.").toUpperCase();
 
 
-function isVowel(x) {
-    var result;
-    result = x == "A" || x == "E" || x == "I" || x == "O" || x == "U";
-    if (result === true){
-        console.log("this is a vow")
-    } else{
-        console.log("this is not a vowel.")
+// function isVowel(x) {
+//     var result;
+//     result = x == "A" || x == "E" || x == "I" || x == "O" || x == "U";
+//     if (result === true){
+//         console.log("this is a vow")
+//     } else{
+//         console.log("this is not a vowel.")
+//     }
+//     return result;
+// }
+// isVowel(userInput)
+
+
+// Create a function that accepts two strings, then determines whether or not the first string is an anagram of the second string by returning a boolean. 
+
+
+// function anagrams(stringA, stringB) {
+//     return cleanString(stringA) === cleanString(stringB);
+// }
+
+// function cleanString(str) {
+//     console.log(str.replace(/[^\w]/g).toLowerCase().split('').sort().join())
+// }   
+
+// anagrams('monk','konm')
+
+function checkStringsAnagram(a, b) {
+    let len1 = a.length;
+    let len2 = b.length;
+    if(len1 !== len2){
+       console.log('Invalid Input');
+       return
     }
-    return result;
-}
-isVowel(userInput)
-
-
+    let str1 = a.split('').sort().join('');
+    let str2 = b.split('').sort().join('');
+    if(str1 === str2){
+       console.log("True");
+    } else { 
+       console.log("False");
+    }
+ }
+ checkStringsAnagram("code 10 cohort","hortoc doce 10")
