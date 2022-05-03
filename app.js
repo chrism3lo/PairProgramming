@@ -28,6 +28,24 @@ console.log(even(randArray));
 console.log(odd(randArray));
 
 
+
+
+// Create a function that checks an array for prime numbers then inserts any pimes into a new array.
+
+let allNums= [2,7,8,78,73,53,69,35]
+
+function isPrime(num) {
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    
+    return num > 1;
+}
+console.log(allNums.filter(isPrime))
+
+
 let userInput = prompt("Enter a letter to see if it is a vowel.").toUpperCase();
 
 
@@ -42,4 +60,5 @@ function isVowel(x) {
     return result;
 }
 isVowel(userInput)
+
 
