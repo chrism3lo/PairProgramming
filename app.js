@@ -85,9 +85,9 @@ function checkStringsAnagram(a, b) {
     let str1 = a.split('').sort().join('');
     let str2 = b.split('').sort().join('');
     if(str1 === str2){
-       console.log("True");
+       console.log("It is an Anagram");
     } else { 
-       console.log("False");
+       console.log("It ANIT NO ANAGRAM");
     }
  }
  checkStringsAnagram("code 10 cohort","hortoc doce 10")
