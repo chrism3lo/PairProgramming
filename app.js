@@ -1,3 +1,4 @@
+// Easy 1
 //Write a JavaScript function that takes in a random array and outputs two new arrays of odd numbers and even 
 //numbers.
  
@@ -29,7 +30,7 @@ console.log(odd(randArray));
 
 
 
-
+// Easy 2
 // Create a function that checks an array for prime numbers then inserts any pimes into a new array.
 
 let allNums= [2,7,8,78,73,53,69,35]
@@ -45,6 +46,11 @@ function isPrime(num) {
 }
 console.log(allNums.filter(isPrime))
 
+
+
+//Medium 1
+//Create a Function Called “vowelChecker” that takes in 
+//a single argument (x) and logs weather or not the input is a vowel
 
 let userInput = prompt("Enter a letter to see if it is a vowel.").toUpperCase();
 
