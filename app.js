@@ -44,7 +44,7 @@ function isPrime(num) {
     
     return num > 1;
 }
-console.log(allNums.filter(isPrime))
+console.log(allNums.filter(isPrime));
 
 
 
@@ -52,20 +52,20 @@ console.log(allNums.filter(isPrime))
 //Create a Function Called “vowelChecker” that takes in 
 //a single argument (x) and logs weather or not the input is a vowel
 
-// let userInput = prompt("Enter a letter to see if it is a vowel.").toUpperCase();
+let userInput = "a".toUpperCase()
 
 
-// function isVowel(x) {
-//     var result;
-//     result = x == "A" || x == "E" || x == "I" || x == "O" || x == "U";
-//     if (result === true){
-//         console.log("this is a vow")
-//     } else{
-//         console.log("this is not a vowel.")
-//     }
-//     return result;
-// }
-// isVowel(userInput)
+function isVowel(x) {
+    var result;
+    result = x == "A" || x == "E" || x == "I" || x == "O" || x == "U";
+    if (result === true){
+        console.log("this is a vow")
+    } else{
+        console.log("this is not a vowel.")
+    }
+    return result;
+}
+isVowel(userInput)
 
 
 //Medium 2
@@ -88,15 +88,6 @@ function checkStringsAnagram(a, b) {
  checkStringsAnagram("code 10 cohort","cohort code 10")
 
  //Medium 3
-// let hcf;
-// function gcd(num1,num2){
-//     for (let i = 1; i <= num1 && i <= num2; i++){
-//         if (num1 % i === 0 && num2 % i === 0){
-//              return hcf = i;
-//         }
-//     }
-// }
-// console.log(gcd(60,72));
 
 function gcd_two_numbers(x, y) {
     if ((typeof x !== 'number') || (typeof y !== 'number'))
@@ -113,6 +104,40 @@ function gcd_two_numbers(x, y) {
 
   console.log(gcd_two_numbers(72,60));
 
-  // Hard 1
+  // Medium 4
 
-  
+//   Create a car object with the items: Make, Model, Year, Milage, and Color. 
+// Then create 3 methods in the object;A driveToWork method, driveAroundTheWorld method, and runErrands method. 
+// Each of these methods should affect the car’s mileage adding to it each time and console logging the old mileage and the new mileage.
+
+  class Car{
+    constructor(make, model,year,milage,color){
+    this.make=make
+    this.model=model
+    this.year= year
+    this.milage= milage
+    this.color=color
+  }
+  driveToWork(x){
+    console.log(`My Current Millage is: ${this.milage}`)
+   this.milage= x + this.milage
+   console.log(`My New Millage is: ${this.milage}`)
+  }
+  driveAroundTheWorld(w){
+    console.log(`My Current Millage is: ${this.milage}`)
+   this.milage= w + this.milage
+   console.log(`My New Millage is: ${this.milage}`)
+  }
+  runErrands(e){
+    console.log(`My Current Millage is: ${this.milage}`)
+    this.milage= e + this.milage
+    console.log(`My New Millage is: ${this.milage}`)
+  }
+
+
+  }
+
+  let jim= new Car('honda','civic','2002',500000,'red')
+  jim.driveToWork(50)
+  jim.driveAroundTheWorld(20000)
+  jim.runErrands(15)
