@@ -13,6 +13,7 @@ function even (a){
     }
     return ar;
 }
+
 function odd (a){
     let ar = [];
     for (let i =0; i < randArray.length; i++){
@@ -25,3 +26,20 @@ function odd (a){
 }
 console.log(even(randArray));
 console.log(odd(randArray));
+
+
+let userInput = prompt("Enter a letter to see if it is a vowel.").toUpperCase();
+
+
+function isVowel(x) {
+    var result;
+    result = x == "A" || x == "E" || x == "I" || x == "O" || x == "U";
+    if (result === true){
+        console.log("this is a vow")
+    } else{
+        console.log("this is not a vowel.")
+    }
+    return result;
+}
+isVowel(userInput)
+
